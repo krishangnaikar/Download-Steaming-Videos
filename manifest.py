@@ -64,7 +64,8 @@ for i in range(1, len(linesCsv)):
     pyautogui.click(798, 457)
 
     time.sleep(2)
-
+    # Do the above just in case
+    # Note: This isn't really needed so
     pyautogui.rightClick(767,445)
     
     
@@ -81,6 +82,7 @@ for i in range(1, len(linesCsv)):
 
     print(manifest_link)
 
+    # Close Safari
     pyautogui.rightClick(193, 1077)
 
     pyautogui.click(203, 1005)
