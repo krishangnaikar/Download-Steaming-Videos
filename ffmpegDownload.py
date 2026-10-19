@@ -29,10 +29,10 @@ for i in range(1, len(linesCsv)): # The start not including the top row where th
     filename = linesCsv[row][6]
     manifest =  linesCsv[row][7]
     path_Manifest += (filename + ".mp4")
-    command = "ffmpeg -i " + '"' + manifest + '"' + " -c copy " + path_Manifest
+    command = ["ffmpeg", "-i", manifest, "-c", "copy", path_Manifest]
 
 
-    subprocess.run(command, shell=True, check=True, input=None, text=True)
+    subprocess.run(command, shell=False, check=True, input=None, text=True)
 
     #print(filename + " was downloaded")
 
